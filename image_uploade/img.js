@@ -12,6 +12,8 @@ const storage = multer.diskStorage({
         cb(null,Date.now() + '_' + file.originalname)
     }
 })
+//multiple image upload
+// const upload = multer({storage:storage}).array('file',6);
 
 router.post('/upload',async(req,res)=>{
   try {
